@@ -57,9 +57,9 @@
       <bind constraint="regex(.,'^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$')" jr:constraintMsg="Per favore inserisci un numero valido" nodeset="/data/Telefono" required="false()" type="string"/>
       <bind constraint="regex(.,'^[\w-]+@([\w-]+\.)+[\w-]+$')" jr:constraintMsg="Per favore inserisci un email valido" nodeset="/data/Email" required="false()" type="string"/>
       <bind nodeset="/data/Cosa" required="true()" type="string"/>
-      <bind nodeset="/data/Descrizione" required="false()" type="string"/>
-      <bind nodeset="/data/Destinatari" required="false()" type="string"/>
-      <bind nodeset="/data/Indirizzo" required="false()" type="geopoint"/>
+      <bind nodeset="/data/Destinatari" required="true()" type="string"maxlengh="120"/>
+      <bind nodeset="/data/Descrizione" required="true()" type="string" maxlengh="2000"/>
+      <bind nodeset="/data/Indirizzo" required="true()" type="geopoint"/>
       <bind constraint="regex(.,'^((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&amp;=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&amp;=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&amp;;%@.\w_]*)#?(?:[\w]*))?)$')" jr:constraintMsg="Per favore inserisci un link valido" nodeset="/data/Link" required="false()" type="string"/>
       <bind nodeset="/data/Immagine" orx:max-pixels="4096" required="false()" type="binary"/>
       <bind nodeset="/data/Informativa" readonly="true()" required="false()" type="string"/>
